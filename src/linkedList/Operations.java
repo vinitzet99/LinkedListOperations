@@ -109,7 +109,7 @@ public class Operations {
      * call insertNode method
      * print list
      */
-    public static void insertNode(){
+    public static void insertNode() {
         LinkedList linkedList = new LinkedList();
         linkedList.push(70);
         linkedList.push(30);
@@ -119,5 +119,27 @@ public class Operations {
         linkedList.insertNode(40);
         System.out.println("\nAfter:");
         linkedList.print();
+    }
+
+    /**
+     * insert node after a given node
+     * create list with push method
+     * print list
+     * call insertNode method
+     * print list
+     * print size of list
+     */
+    public static void deleteNode() {
+        LinkedList linkedList = new LinkedList();
+        linkedList.push(70);
+        linkedList.push(40);
+        linkedList.push(30);
+        linkedList.push(56);
+        System.out.println("Before:");
+        linkedList.print();
+        linkedList.deleteNode(40);
+        System.out.println("\nAfter:");
+        linkedList.print();
+        System.out.println("\nSize of list: " + linkedList.size());
     }
 }

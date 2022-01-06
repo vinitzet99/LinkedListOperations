@@ -143,27 +143,69 @@ public class LinkedList {
         }
         return -1;
     }
+
     /**
      * Insert 40 after 30
      * check if list is not empty
      * traverse for 30
      * update link
      */
-    public void insertNode(int value){
-        int toFound=30;
-        Node newNode=new Node(value);
+    public void insertNode(int value) {
+        int toFound = 30;
+        Node newNode = new Node(value);
         if (head == null) {
             System.out.println("Linked List is empty");
         } else {
             Node temp = head;
-            while (temp!=null) {
-                if( temp.data ==toFound){
-                    newNode.next=temp.next;
-                    temp.next=newNode;
+            while (temp != null) {
+                if (temp.data == toFound) {
+                    newNode.next = temp.next;
+                    temp.next = newNode;
                     break;
                 }
                 temp = temp.next;
             }
         }
+    }
+
+    /**
+     * Delete node with given value
+     * check if list is not empty
+     * traverse for value and track previous
+     * update previous with next node to value node
+     */
+    public void deleteNode(int value) {
+        Node newNode = new Node(value);
+        if (head == null) {
+            System.out.println("Linked List is empty");
+        } else {
+            Node previous = head;
+            Node temp = head;
+            while (temp != null) {
+                if (temp.data == value) {
+                    newNode.next = temp.next;
+                    previous.next = temp.next;
+                    break;
+                }
+                previous = temp;
+                temp = temp.next;
+            }
+        }
+    }
+
+    /**
+     * Finds size of list
+     * traverse through the list
+     * increase count
+     * return count
+     */
+    public int size() {
+        Node temp = head;
+        int count = 0;
+        while (temp != null) {
+            count++;
+            temp = temp.next;
+        }
+        return count;
     }
 }

@@ -22,6 +22,7 @@ public class LinkedListMain {
         System.out.println("Enter 5 to del the data at the end");
         System.out.println("Enter 6 to search node with value");
         System.out.println("Enter 7 add new node after a given node ");
+        System.out.println("Enter 8 del new node after a given node ");
         switch (sc.nextInt()) {
             case 1:
                 new Operations().addDataAtStart(); // add data at start of list
@@ -44,6 +45,8 @@ public class LinkedListMain {
             case 7:
                 new Operations().insertNode(); // insert node after a given node
                 break;
+            case 8:
+                new Operations().deleteNode(); // del node with given value
         }
     }
 }
