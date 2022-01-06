@@ -72,4 +72,22 @@ public class LinkedList {
         previousNode.next = newNode;
         newNode.next = tempNode;
     }
+
+    /**
+     * remove node from the start of list
+     * checks if there is node in linked list
+     * checks if there is one node
+     * update head to next
+     */
+    public void remove() {
+        if (head == null) {
+            System.out.println("No records present");
+        }
+        else if(head.next== null){
+            head=null;
+        }
+        else{
+            head=head.next;
+        }
+    }
 }

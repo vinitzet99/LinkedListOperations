@@ -44,7 +44,26 @@ public class Operations {
         System.out.println("Before:");
         linkedList.print();
         linkedList.insertInBetween(firstNode, newNode);
-        System.out.println("\nafter:");
+        System.out.println("\nAfter:");
+        linkedList.print();
+    }
+
+    /**
+     * Delete 1st node in linked list
+     *  create list with push method
+     *  prints linked list
+     *  call remove method
+     *  print linked list
+     */
+    public static void delDataAtStart(){
+        LinkedList linkedList = new LinkedList();
+        linkedList.push(70);
+        linkedList.push(30);
+        linkedList.push(56);
+        System.out.println("Before:");
+        linkedList.print();
+        linkedList.remove();
+        System.out.println("\nAfter:");
         linkedList.print();
     }
 }

@@ -18,15 +18,19 @@ public class LinkedListMain {
         System.out.println("Enter 1 to add the data at the start");
         System.out.println("Enter 2 to add the data at the end");
         System.out.println("Enter 3 to add the data in the middle");
+        System.out.println("Enter 4 to del the data at the start");
         switch (sc.nextInt()) {
             case 1:
-                new Operations().addDataAtStart(); //data at start of list
+                new Operations().addDataAtStart(); // add data at start of list
                 break;
             case 2:
-                new Operations().addDataAtEnd(); // data at end of list
+                new Operations().addDataAtEnd(); // add data at end of list
                 break;
             case 3:
-                new Operations().addDataInBetween(); // data in between two elements of list
+                new Operations().addDataInBetween(); // add data in between two elements of list
+                break;
+            case 4:
+                new Operations().delDataAtStart(); // del data at start of list
                 break;
         }
     }
