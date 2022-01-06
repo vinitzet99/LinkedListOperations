@@ -20,6 +20,7 @@ public class LinkedListMain {
         System.out.println("Enter 3 to add the data in the middle");
         System.out.println("Enter 4 to del the data at the start");
         System.out.println("Enter 5 to del the data at the end");
+        System.out.println("Enter 6 to search node with value");
         switch (sc.nextInt()) {
             case 1:
                 new Operations().addDataAtStart(); // add data at start of list
@@ -35,6 +36,9 @@ public class LinkedListMain {
                 break;
             case 5:
                 new Operations().delDataAtEnd(); // del data at end of list
+                break;
+            case 6:
+                new Operations().searchNode(); // search node with value
                 break;
         }
     }

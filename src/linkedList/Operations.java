@@ -50,12 +50,12 @@ public class Operations {
 
     /**
      * Delete 1st node in linked list
-     *  create list with push method
-     *  prints linked list
-     *  call remove method
-     *  print linked list
+     * create list with push method
+     * prints linked list
+     * call remove method
+     * print linked list
      */
-    public static void delDataAtStart(){
+    public static void delDataAtStart() {
         LinkedList linkedList = new LinkedList();
         linkedList.push(70);
         linkedList.push(30);
@@ -66,14 +66,15 @@ public class Operations {
         System.out.println("\nAfter:");
         linkedList.print();
     }
+
     /**
      * Delete last node in linked list
-     *  create list with push method
-     *  prints linked list
-     *  call pop method
-     *  print linked list
+     * create list with push method
+     * prints linked list
+     * call pop method
+     * print linked list
      */
-    public static void delDataAtEnd(){
+    public static void delDataAtEnd() {
         LinkedList linkedList = new LinkedList();
         linkedList.push(70);
         linkedList.push(30);
@@ -83,5 +84,21 @@ public class Operations {
         linkedList.pop();
         System.out.println("\nAfter:");
         linkedList.print();
+    }
+
+    /**
+     * Search node with 30 value in linked list
+     * create list with push method
+     * prints linked list
+     * call search method
+     * print position list or message
+     */
+    public static void searchNode() {
+        LinkedList linkedList = new LinkedList();
+        linkedList.push(70);
+        linkedList.push(30);
+        linkedList.push(56);
+        linkedList.print();
+        System.out.println("\nPosition of 30 is: " + linkedList.search(30));
     }
 }

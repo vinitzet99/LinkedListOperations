@@ -82,14 +82,13 @@ public class LinkedList {
     public void remove() {
         if (head == null) {
             System.out.println("No records present");
-        }
-        else if(head.next== null){
-            head=null;
-        }
-        else{
-            head=head.next;
+        } else if (head.next == null) {
+            head = null;
+        } else {
+            head = head.next;
         }
     }
+
     /**
      * remove node from the end of list
      * checks if there is node in linked list
@@ -99,20 +98,49 @@ public class LinkedList {
     public void pop() {
         if (head == null) {
             System.out.println("No records present");
-        }
-        else if(head.next== null){
-            head=null;
-        }
-        else{
-            Node previous=head;
-            Node temp=head;
-            while(temp.next!=null){
-                previous=temp;
-                temp=temp.next;
+        } else if (head.next == null) {
+            head = null;
+        } else {
+            Node previous = head;
+            Node temp = head;
+            while (temp.next != null) {
+                previous = temp;
+                temp = temp.next;
             }
-            previous.next=null;
-            tail=previous;
+            previous.next = null;
+            tail = previous;
         }
 
+    }
+
+    /**
+     * Search 30 in linked list
+     * check if list is not empty
+     * check if data exists
+     * return position if exists else return -1 if not exists
+     */
+    public int search(int value) {
+        int flag = 0, count = 0;
+        if (head == null) {
+            System.out.println("Linked List is empty");
+        } else {
+            Node temp = head;
+            while (temp != null) {
+                if (temp.data == value) {
+                    count++;
+                    flag = 1;
+                    break;
+                }
+                temp = temp.next;
+                count++;
+            }
+            if (flag == 1) {
+                return count;
+            } else {
+                System.out.println("Not found!!");
+                return -1;
+            }
+        }
+        return -1;
     }
 }
