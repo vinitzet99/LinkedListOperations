@@ -66,4 +66,22 @@ public class Operations {
         System.out.println("\nAfter:");
         linkedList.print();
     }
+    /**
+     * Delete last node in linked list
+     *  create list with push method
+     *  prints linked list
+     *  call pop method
+     *  print linked list
+     */
+    public static void delDataAtEnd(){
+        LinkedList linkedList = new LinkedList();
+        linkedList.push(70);
+        linkedList.push(30);
+        linkedList.push(56);
+        System.out.println("Before:");
+        linkedList.print();
+        linkedList.pop();
+        System.out.println("\nAfter:");
+        linkedList.print();
+    }
 }

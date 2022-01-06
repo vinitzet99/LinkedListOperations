@@ -90,4 +90,29 @@ public class LinkedList {
             head=head.next;
         }
     }
+    /**
+     * remove node from the end of list
+     * checks if there is node in linked list
+     * checks if there is one node
+     * update head to next
+     */
+    public void pop() {
+        if (head == null) {
+            System.out.println("No records present");
+        }
+        else if(head.next== null){
+            head=null;
+        }
+        else{
+            Node previous=head;
+            Node temp=head;
+            while(temp.next!=null){
+                previous=temp;
+                temp=temp.next;
+            }
+            previous.next=null;
+            tail=previous;
+        }
+
+    }
 }
