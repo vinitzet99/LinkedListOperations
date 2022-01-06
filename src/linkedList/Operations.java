@@ -101,4 +101,23 @@ public class Operations {
         linkedList.print();
         System.out.println("\nPosition of 30 is: " + linkedList.search(30));
     }
+
+    /**
+     * insert node after a given node
+     * create list with push method
+     * print list
+     * call insertNode method
+     * print list
+     */
+    public static void insertNode(){
+        LinkedList linkedList = new LinkedList();
+        linkedList.push(70);
+        linkedList.push(30);
+        linkedList.push(56);
+        System.out.println("Before:");
+        linkedList.print();
+        linkedList.insertNode(40);
+        System.out.println("\nAfter:");
+        linkedList.print();
+    }
 }

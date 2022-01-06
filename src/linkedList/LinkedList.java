@@ -143,4 +143,27 @@ public class LinkedList {
         }
         return -1;
     }
+    /**
+     * Insert 40 after 30
+     * check if list is not empty
+     * traverse for 30
+     * update link
+     */
+    public void insertNode(int value){
+        int toFound=30;
+        Node newNode=new Node(value);
+        if (head == null) {
+            System.out.println("Linked List is empty");
+        } else {
+            Node temp = head;
+            while (temp!=null) {
+                if( temp.data ==toFound){
+                    newNode.next=temp.next;
+                    temp.next=newNode;
+                    break;
+                }
+                temp = temp.next;
+            }
+        }
+    }
 }
