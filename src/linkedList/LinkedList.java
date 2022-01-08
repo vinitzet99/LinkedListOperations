@@ -5,12 +5,14 @@
  */
 package linkedList;
 
+import javax.swing.plaf.synth.SynthEditorPaneUI;
+
 public class LinkedList {
     Node head;
     Node tail;
 
     /**
-     * add node in the start
+     * add node in the current
      * create new node
      * check if list is empty or not
      * update add node
@@ -74,7 +76,7 @@ public class LinkedList {
     }
 
     /**
-     * remove node from the start of list
+     * remove node from the current of list
      * checks if there is node in linked list
      * checks if there is one node
      * update head to next
@@ -207,5 +209,33 @@ public class LinkedList {
             temp = temp.next;
         }
         return count;
+    }
+
+    /**
+     * sorts linked list using bubble sort
+     * for each element compares is to all other elements
+     * based on comparison swaps the node values
+     * iterate till all nodes are traversed
+     */
+    public void sort(){
+        Node point = head, current = null;
+        int temp;
+        if(head==null){
+            System.out.println("List is sorted");
+        }
+        else{
+            while(point!=null){
+                current=point.next;
+                while(current!=null){
+                    if(point.data> current.data){
+                        temp=point.data;
+                        point.data=current.data;
+                        current.data=temp;
+                    }
+                    current=current.next;
+                }
+                point=point.next;
+            }
+        }
     }
 }

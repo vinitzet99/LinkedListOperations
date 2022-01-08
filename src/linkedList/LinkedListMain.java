@@ -1,7 +1,7 @@
 /**
  * @author Vinit Kumar
  * @created on 06-01-2022
- * User interface menu
+ * User interface menu for Linked list operations
  */
 package linkedList;
 
@@ -21,8 +21,9 @@ public class LinkedListMain {
         System.out.println("Enter 4 to del the data at the start");
         System.out.println("Enter 5 to del the data at the end");
         System.out.println("Enter 6 to search node with value");
-        System.out.println("Enter 7 add new node after a given node ");
-        System.out.println("Enter 8 del new node after a given node ");
+        System.out.println("Enter 7 to add new node after a given node ");
+        System.out.println("Enter 8 to del new node after a given node ");
+        System.out.println("Enter 9 to sort");
         switch (sc.nextInt()) {
             case 1:
                 new Operations().addDataAtStart(); // add data at start of list
@@ -47,6 +48,8 @@ public class LinkedListMain {
                 break;
             case 8:
                 new Operations().deleteNode(); // del node with given value
+            case 9:
+                new Operations().sortList(); // sort link list
         }
     }
 }

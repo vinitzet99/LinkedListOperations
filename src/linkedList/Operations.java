@@ -125,7 +125,7 @@ public class Operations {
      * insert node after a given node
      * create list with push method
      * print list
-     * call insertNode method
+     * call deleteNode method
      * print list
      * print size of list
      */
@@ -141,5 +141,24 @@ public class Operations {
         System.out.println("\nAfter:");
         linkedList.print();
         System.out.println("\nSize of list: " + linkedList.size());
+    }
+    /**
+     * insert node after a given node
+     * create list with push method
+     * print list
+     * call sort method
+     * print list
+     */
+    public static void sortList(){
+        LinkedList linkedList = new LinkedList();
+        linkedList.push(70);
+        linkedList.push(40);
+        linkedList.push(30);
+        linkedList.push(56);
+        System.out.println("Before:");
+        linkedList.print();
+        linkedList.sort();
+        System.out.println("\nAfter:");
+        linkedList.print();
     }
 }
